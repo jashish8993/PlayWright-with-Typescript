@@ -3,7 +3,7 @@ import {test,expect,BrowserContext,Browser, Page} from '@playwright/test'
 import { webkit,chromium } from 'playwright';
 
 test('My First test', async ({})=>{
-const browser : Browser= await chromium.launch({headless:false, channel:'chrome'});
+const browser : Browser= await chromium.launch({headless:true, channel:'chrome'});
 //1st browser context
 const Brcontext1: BrowserContext= await browser.newContext();
 const page1: Page=await Brcontext1.newPage();
