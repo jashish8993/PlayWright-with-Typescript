@@ -4,7 +4,6 @@ test('Checkbox',async({page}) =>{
 
 await page.goto('https://www.testmuai.com/selenium-playground/checkbox-demo/');
 
-
 const fcheck= await page.locator("//*[text()='Click on check box']");
 await fcheck.check();
 console.log(await fcheck.isChecked);
