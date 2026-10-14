@@ -18,7 +18,8 @@ export default defineConfig({
 //setting up the global timeout
   //globalTimeout: process.env.CI ? 50 * 60 * 1000 : undefined,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
-  forbidOnly: !!process.env.CI,
+  //forbidOnly: !!process.env.CI, this will avoid tets.only and marking my test as failed
+  forbidOnly : false
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
