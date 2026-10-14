@@ -24,6 +24,4 @@ await page.locator("//*[text()= 'Option 1']").click();
 //await expect (page.locator("//*[text()= 'Option 1']")).not.toBeChecked();
 await page.waitForTimeout(5000); 
 await expect ( page.locator("//*[text()=' Option 3']")).toBeDisabled();
-
-
 })

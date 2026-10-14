@@ -8,7 +8,6 @@ const browser : Browser= await chromium.launch({headless:true, channel:'chrome'}
 const Brcontext1: BrowserContext= await browser.newContext();
 const page1: Page=await Brcontext1.newPage();
 
-
     await page1.goto('https://practicetestautomation.com/practice-test-login/');
     console.log(await page1.title());
     await expect(page1).toHaveTitle('Test Login | Practice Test Automation');

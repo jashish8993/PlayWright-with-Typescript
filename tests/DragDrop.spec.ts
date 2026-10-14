@@ -9,9 +9,7 @@ const demoFrame = page.frameLocator("(//iframe[@class='demo-frame'])[1]");
   const sourceElement = demoFrame.locator("//*[text()='High Tatras']");
   const targetElement = demoFrame.locator("//*[@id='trash']");
   await sourceElement.hover();
-//const sourceElement =  page.locator("//*[text()='High Tatras']");
 
-//await page.locator('#draggable').hover();
 await page.mouse.down();
 
 await targetElement.hover();

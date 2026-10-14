@@ -16,7 +16,5 @@ for (let i = 0; i < counter; i++)
     const text = await allsuggestion.nth(i).textContent();
     console.log(text);
     expect(text).toContain('playwright');
-   }
-
-    
+   } 
 })

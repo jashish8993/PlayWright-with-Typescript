@@ -1,6 +1,4 @@
 import {test,expect} from '@playwright/test'
-
-
 test('js alerts', async( {page})=>
 {
 
@@ -11,8 +9,6 @@ await dialog.accept();
 
 await page.locator("(//button[text()='Click Me'])[1]").click();
 await page.waitForTimeout(5000);
-
-
 
 await page.locator("(//button[text()='Click Me'])[2]").click();
 await page.waitForTimeout(5000);
