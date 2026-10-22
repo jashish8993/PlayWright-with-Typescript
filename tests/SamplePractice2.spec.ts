@@ -1,4 +1,4 @@
-
+//this test is for id changing when we click on button 
 import {test,expect} from '@playwright/test'
 test('Sample Practice 2', async({page})=>{
     await page.goto("https://www.testmuai.com/selenium-playground/auto-healing/");
