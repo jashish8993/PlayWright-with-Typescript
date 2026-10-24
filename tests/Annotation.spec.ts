@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test.only('focus on this test',async ({})=> {
+test('focus on this test',async ({})=> {
 console.log('focusing');
 });
 
