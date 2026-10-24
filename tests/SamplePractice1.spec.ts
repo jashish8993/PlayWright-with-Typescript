@@ -11,7 +11,7 @@ test('Sample Practice 1', async ({ page }) => {
     await expect(page.locator('#btn-submit')).toBeVisible();
     await page.locator('#btn-submit').click();
     page.on('request', request => {
-        console.log('REQUEST:', request.url());
+    console.log('REQUEST:', request.url());
     });
 
     //await page.locator('#btn-submit').click();
