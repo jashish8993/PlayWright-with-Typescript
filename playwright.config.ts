@@ -47,6 +47,7 @@ export default defineConfig({
   timeout: 30000,
 
   */
+ //timeout: 10000,
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
@@ -58,11 +59,24 @@ export default defineConfig({
 //maxFailures: process.env.CI ? 1 : 0,
   /* Configure projects for major browsers */
   projects: [
+    { name: 'setup', testMatch: /.*\.setup\.ts/ },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'],
+        storageState: 'auth.json',
+       },
+      dependencies: ['setup'],
+      testMatch: /.*\.spec\.ts/
     },
-
+{
+      name: 'chromium-guest',
+      use: { 
+        ...devices['Desktop Chrome'],
+        storageState: { cookies: [], origins: [] }, // 👈 Explicitly empty state
+      },
+      // ❌ NO dependencies array here. This stops the login test from running.
+      testMatch: /.*\.guest\.spec\.ts/, // Matches files like login-page.guest.spec.ts
+    },
    /* {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
