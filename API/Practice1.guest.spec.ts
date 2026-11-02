@@ -1,3 +1,4 @@
+//this teat case is for practices types of ways to add base url and GET request
 import {test,expect,request} from '@playwright/test';
 
 let reqcontext :any
