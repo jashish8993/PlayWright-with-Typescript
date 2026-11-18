@@ -6,8 +6,7 @@ test.beforeAll('A general employee', async() =>{
 reqcontext = await request.newContext(
     {
         baseURL: "https://reqres.in/api/"
-    }
-)
+    })
 })
 
 test('API call way 1', async ({request})=>{
