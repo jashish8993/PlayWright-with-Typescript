@@ -20,7 +20,6 @@ const req= await test.get("https://reqres.in/api/users");
 console.log(await req.json());
 });
 
-
 test('API call way 3', async ()=>{
 //const test = await request.newContext();
 const req= await reqcontext.get("users");
