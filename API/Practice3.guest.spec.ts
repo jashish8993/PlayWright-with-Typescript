@@ -8,8 +8,7 @@ const test1 = await req.json();
 const ids = await test1[2].id;
 const userIds = await test1[2].userId;
 const req1= await request.get("https://jsonplaceholder.typicode.com/posts",{
-params :
-{
+params :{
 userId : userIds,
 id : ids,
 }}
